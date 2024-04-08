@@ -23,7 +23,7 @@ multiplyAdd(arrNumb);
 let arrNum = [1,2,3,4,5,6,7,8,9];
 let i = 0;
      while (i < arrNum.length)
-      {  if (arrNum[i] === 3)
+      {  if (arrNum[i] === 4)
         break; 
          console.log(arrNum[i])
          i++;
