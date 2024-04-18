@@ -1,29 +1,44 @@
 //Write a program that takes in an array of numbers and consoles the first four items multiplied by itself  and the last two added by 10. Return the array with the new values
 
-var arrNumb= [1,2,3,4,5,6,7,8, 9, 10 ,11,12];
 
-function multiplyAdd(arrNumb){
-    arrNumb.forEach((numb, index)=>{
-        if(index < 4){
-            arrNumb[index] = numb * numb;
-        }
-        else if(index >= arrNumb.length - 2){
-            arrNumb[index]= numb + 10;
-        }
+let numbers=[22,33,44,55,66,77];
+let newarr=[];
+function addMultiply(){
+  numbers.slice(0,4).forEach((a)=>{
+    newarr.push(a*a)
+  });
+  numbers.slice(-2).forEach((a)=>{
+    newarr.push(a+10)
+  });
+  console.log(newarr)
+  return newarr
+}
+addMultiply(newarr);
 
- })
-    console.log(arrNumb);
-    return arrNumb;
+// function multiplyAdd(arrNumb){
+//     arrNumb.forEach((numb, index)=>{
+//         if(index < 4){
+//             arrNumb[index] = numb * numb;
+//         }
+//         else if(index >= arrNumb.length - 2){
+//             arrNumb[index]= numb + 10;
+//         }
+
+//  })
+//     console.log(arrNumb);
+//     return arrNumb;
    
-     };
-multiplyAdd(arrNumb);
+//      };
+// multiplyAdd(arrNumb);   This is wrong because I did not create a new array that will hold new nbrs
+
+
 
 //Write a program that takes in the following array and use a while loop to iterate and break when the item is equal to the fourth index :let arrNum = [1,2,3,4,5,6,7,8,9];
 
 let arrNum = [1,2,3,4,5,6,7,8,9];
 let i = 0;
      while (i < arrNum.length)
-      {  if (arrNum[i] === 4)
+      {  if (arrNum[i] === 4)   //if we were to set i only as a conditin in if() then it would be if(i===3)
         break; 
          console.log(arrNum[i])
          i++;
@@ -39,6 +54,7 @@ function arrStrs(array) {
         if (i === 1) 
             continue; 
             console.log(array[i])
+        
         } };
 
   arrStrs(fruits);
@@ -46,8 +62,8 @@ function arrStrs(array) {
 
 // //Write a function that accepts an array of strings and console.logs each element using a for loop.
 
-   function arrString(arr)
-   { for (let j = 0; j < arr.length; j++) {
+   function arrString(arr){
+     for (let j = 0; j < arr.length; j++) {
        console.log(arr[j]); }
    }
     arrString(['Nice', 'Digestive', 'Riham', 'Akarabo']);
